@@ -5,8 +5,8 @@
 
 (setq prelude-guru nil)
 
-(prelude-ensure-module-deps '(solarized-theme))
-(load-theme 'solarized-dark t)
+(prelude-ensure-module-deps '(monokai-theme))
+(load-theme 'monokai t)
 
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
