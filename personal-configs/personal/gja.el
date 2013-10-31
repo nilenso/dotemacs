@@ -3,16 +3,17 @@
 ;;; Commentary:
 ;;; Feel free to fork
 ;;; Code:
-(defun local-fix-indentation ()
+(defun fix-ruby-mode ()
   "Fix to not wrap, or give stupid warnings after 80 chars."
   (progn
+    (show-smartparens-mode nil)
     (visual-line-mode t)))
 
 (prelude-ensure-module-deps '(adaptive-wrap))
 (setq visual-line-fringe-indicators '(left-curly-arrow nil))
 (setq whitespace-line-column 1000)
 
-(add-hook 'ruby-mode-hook 'local-fix-indentation)
+(add-hook 'ruby-mode-hook 'fix-ruby-mode)
 
 (add-hook 'LaTeX-mode-hook 'turn-off-auto-fill-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-visual-line-mode)
