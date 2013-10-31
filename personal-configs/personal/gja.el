@@ -6,7 +6,7 @@
 (defun fix-ruby-mode ()
   "Fix to not wrap, or give stupid warnings after 80 chars."
   (progn
-    (show-smartparens-mode nil)
+    (turn-off-show-smartparens-mode)
     (visual-line-mode t)))
 
 (prelude-ensure-module-deps '(adaptive-wrap))
