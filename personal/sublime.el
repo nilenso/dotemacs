@@ -37,3 +37,5 @@
      (define-key ruby-mode-map (kbd "M-E") 'rspec-rerun)
      (define-key ruby-mode-map (kbd "M-s-<down>") 'rspec-toggle-spec-and-target)
      (rspec-install-snippets)))
+
+(global-linum-mode t)
