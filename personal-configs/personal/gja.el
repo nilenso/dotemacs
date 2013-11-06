@@ -3,17 +3,13 @@
 ;;; Commentary:
 ;;; Feel free to fork
 ;;; Code:
-(defun fix-ruby-mode ()
-  "Fix to not wrap, or give stupid warnings after 80 chars."
-  (progn
-    (turn-off-show-smartparens-mode)
-    (visual-line-mode t)))
-
 (prelude-ensure-module-deps '(adaptive-wrap))
 (setq visual-line-fringe-indicators '(left-curly-arrow nil))
 (setq whitespace-line-column 1000)
 
-(add-hook 'ruby-mode-hook 'fix-ruby-mode)
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+
+(add-hook 'ruby-mode-hook 'turn-off-show-smartparens-mode)
 
 (add-hook 'LaTeX-mode-hook 'turn-off-auto-fill-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-visual-line-mode)
