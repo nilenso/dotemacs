@@ -1,4 +1,4 @@
-;;; steven --- Steven's custom stuff
+;;; aninda --- Aninda's custom stuff
 ;;; Commentary:
 
 ;;; Code:
@@ -6,6 +6,6 @@
 (prelude-ensure-module-deps '(monokai-theme))
 (load-theme 'monokai t)
 
-(provide 'steven)
+(provide 'aninda)
 
-;;; steven.el ends here
+;;; aninda.el ends here

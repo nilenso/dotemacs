@@ -17,11 +17,5 @@
 (prelude-ensure-module-deps '(solarized-theme))
 (load-theme 'solarized-dark t)
 
-(define-key global-map (kbd "RET") 'newline-and-indent)
-
-;; Force reset of path for OSX
-(setenv "PATH" (shell-command-to-string "env -i HOME=$HOME bash -lc 'source ~/.bashrc && echo $PATH'"))
-
-(auto-complete-mode)
 (provide 'gja)
 ;;; gja.el ends here
