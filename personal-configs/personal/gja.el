@@ -9,7 +9,7 @@
 
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
-(add-hook 'ruby-mode-hook 'turn-off-show-smartparens-mode)
+(add-hook 'ruby-mode-hook 'turn-on-visual-line-mode)
 
 (add-hook 'LaTeX-mode-hook 'turn-off-auto-fill-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-visual-line-mode)
