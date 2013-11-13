@@ -1,0 +1,3 @@
+[submodule "vendor/insfactor"]
+	path = vendor/insfactor
+	url = https://github.com/duelinmarkers/insfactor.el.git
