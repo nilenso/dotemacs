@@ -1,4 +1,4 @@
-;;; steven --- Steven's custom stuff
+;;; nid --- Nid's custom stuff
 ;;; Commentary:
 
 ;;; Code:
@@ -10,6 +10,6 @@
 (global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "M-;") 'comment-or-uncomment-line-or-region)
 
-(provide 'steven)
+(provide 'nid)
 
-;;; steven.el ends here
+;;; nid.el ends here
