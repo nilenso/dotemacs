@@ -1,4 +1,4 @@
-(prelude-ensure-module-deps '(zencoding-mode))
+(prelude-ensure-module-deps '(emmet-mode))
 
 (eval-after-load 'web-mode
-  '(define-key web-mode-map [(tab)] 'zencoding-expand-yas))
+  '(define-key web-mode-map [(tab)] 'emmet-expand-yas))
