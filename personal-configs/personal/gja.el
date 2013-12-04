@@ -3,7 +3,7 @@
 ;;; Commentary:
 ;;; Feel free to fork
 ;;; Code:
-(prelude-ensure-module-deps '(adaptive-wrap))
+(prelude-ensure-module-deps '(adaptive-wrap htmlize))
 (setq visual-line-fringe-indicators '(left-curly-arrow nil))
 (setq whitespace-line-column 1000)
 
