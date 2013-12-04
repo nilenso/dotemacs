@@ -24,11 +24,16 @@
    (forward-line 1)
    (yank)))
 
+(defun expand-to-word-and-multiple-cursors (args)
+  (interactive "p")
+  (if (region-active-p) (mc/mark-next-like-this args) (er/mark-word)))
+
 (global-set-key (kbd "M-t") 'projectile-find-file)
 (global-set-key (kbd "M-s-<right>") 'switch-to-next-buffer)
 (global-set-key (kbd "M-s-<left>") 'switch-to-prev-buffer)
 (global-set-key (kbd "M-D") 'duplicate-line)
 (global-set-key (kbd "M-/") 'comment-or-uncomment-line-or-region)
+(global-set-key (kbd "M-d") 'expand-to-word-and-multiple-cursors)
 
 (eval-after-load 'rspec-mode
   '(progn
