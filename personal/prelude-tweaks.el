@@ -5,7 +5,7 @@
 
 (setq prelude-guru nil)
 (setq prelude-whitespace nil)
-(key-chord-mode -1)
+(if (fboundp 'key-chord-mode) (key-chord-mode -1) nil)
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;;; prelude-tweaks.el ends here
