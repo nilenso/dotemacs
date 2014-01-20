@@ -10,6 +10,8 @@
 (global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "M-;") 'comment-or-uncomment-line-or-region)
 
+(setq ring-bell-function #'ignore)
+
 (provide 'steven)
 
 ;;; steven.el ends here
