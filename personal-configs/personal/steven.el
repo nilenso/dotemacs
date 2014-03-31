@@ -8,7 +8,6 @@
                     :height 160)
 
 (global-set-key (kbd "M-/") 'hippie-expand)
-(global-set-key (kbd "M-;") 'comment-or-uncomment-line-or-region)
 
 (setq ring-bell-function #'ignore)
 
