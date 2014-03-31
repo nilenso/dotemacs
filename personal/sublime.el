@@ -29,8 +29,8 @@
   (if (region-active-p) (mc/mark-next-like-this args) (er/mark-word)))
 
 (global-set-key (kbd "s-t") 'projectile-find-file)
-(global-set-key (kbd "s-s-<right>") 'switch-to-next-buffer)
-(global-set-key (kbd "s-s-<left>") 'switch-to-prev-buffer)
+(global-set-key (kbd "M-s-<right>") 'switch-to-next-buffer)
+(global-set-key (kbd "M-s-<left>") 'switch-to-prev-buffer)
 (global-set-key (kbd "s-D") 'duplicate-line)
 (global-set-key (kbd "s-/") 'comment-or-uncomment-line-or-region)
 (global-set-key (kbd "s-d") 'expand-to-word-and-multiple-cursors)
