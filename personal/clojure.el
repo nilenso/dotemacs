@@ -7,6 +7,6 @@
 (prelude-ensure-module-deps '(cider))
 (setq cider-repl-wrap-history t)
 (setq cider-repl-history-size 1000)
-(setq cider-repl-history-file ".nrepl-history")
+(setq cider-repl-history-file "~/.nrepl-history")
 
 (provide 'clojure)
