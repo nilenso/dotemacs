@@ -1,4 +1,6 @@
-(prelude-ensure-module-deps '(clj-refactor))
+(prelude-ensure-module-deps '(clj-refactor company-cider))
+
+(eval-after-load 'company '(add-to-list 'company-backends 'company-cider))
 
 (add-hook 'clojure-mode-hook (lambda ()
                                (clj-refactor-mode 1)
