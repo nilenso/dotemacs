@@ -15,5 +15,8 @@
 (add-hook 'LaTeX-mode-hook 'turn-off-auto-fill-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-visual-line-mode)
 
+(setq projectile-completion-system 'grizzl)
+(add-hook 'text-mode-hook 'turn-off-guru-mode)
+
 (provide 'gja)
 ;;; gja.el ends here
