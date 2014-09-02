@@ -6,6 +6,7 @@
   (global-linum-mode t)
   (global-company-mode)
   (tool-bar-mode -1)
+  (delete-selection-mode)
   (yas-global-mode))
 
 (nel:run-after-initializing
