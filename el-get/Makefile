@@ -1,12 +1,12 @@
-all: ~/.emacs
+all: ~/.emacs ~/.emacs.d ~/.emacs.d/custom.el
 
-~/.emacs: prelude.el epilogue.el modules enabled-modules ~/.emacs.d/custom.el
+~/.emacs: prelude.el epilogue.el modules enabled-modules
 	./install.sh $@
 
 ~/.emacs.d:
 	mkdir -p $@
 
-~/.emacs.d/custom.el: ~/.emacs.d
+~/.emacs.d/custom.el: 
 	touch $@
 
 enabled-modules:
