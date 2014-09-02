@@ -1,16 +1,23 @@
 (nel:require-packages 'anzu 'browse-kill-ring 'company-mode 'projectile 'undo-tree 'smex 'multiple-cursors 'yasnippets 'rainbow-delimiters 'expand-region)
 
 (nel:run-after-initializing
-  (projectile-global-mode)
-  (global-rainbow-delimiters-mode)
+  (projectile-global-mode t)
+  (global-rainbow-delimiters-mode t)
   (global-linum-mode t)
-  (global-company-mode)
+  (global-company-mode t)
+  (global-undo-tree-mode t)
   (tool-bar-mode -1)
-  (delete-selection-mode)
-  (yas-global-mode))
+  (delete-selection-mode t)
+  (fset 'yes-or-no-p 'y-or-n-p)
+  (yas-global-mode t))
+
+(defun back-to-indentation-or-beginning () (interactive)
+   (if (= (point) (progn (back-to-indentation) (point)))
+       (beginning-of-line)))
 
 (nel:run-after-initializing
   (windmove-default-keybindings)
+  (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning)
   (global-set-key (kbd "C-=") 'er/expand-region)
   (global-set-key (kbd "s-t") 'projectile-find-file)
   (global-set-key (kbd "s-g") 'projectile-grep)
