@@ -1,8 +1,1 @@
-base
-clojure
-git
-grizzl
-web
-ruby
-sublime
-monokai
+base clojure git grizzl web ruby sublime monokai save-autosave-in-temp-folder

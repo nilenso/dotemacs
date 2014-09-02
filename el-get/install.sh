@@ -5,7 +5,7 @@ read_enabled_modules() {
 }
 
 ( cat prelude.el
-  read_enabled_modules | while read i; do
+  for i in `read_enabled_modules`; do
     echo ";; $i.el"
     cat modules/$i.el
   done

@@ -8,3 +8,6 @@ all: ~/.emacs
 
 ~/.emacs.d/custom.el: ~/.emacs.d
 	touch $@
+
+enabled-modules:
+	# Using the default enabled modules. See sample-enabled-modules for samples
