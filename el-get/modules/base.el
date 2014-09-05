@@ -9,6 +9,7 @@
   (tool-bar-mode -1)
   (delete-selection-mode t)
   (fset 'yes-or-no-p 'y-or-n-p)
+  (scroll-bar-mode -1)
   (yas-global-mode t))
 
 (defun back-to-indentation-or-beginning () (interactive)
