@@ -7,7 +7,7 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+(add-to-list 'el-get-recipe-path "PWD/recipes")
 
 (setq nel:my-packages '())
 (defvar nel-initialized-hook nil)

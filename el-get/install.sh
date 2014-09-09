@@ -4,7 +4,7 @@ read_enabled_modules() {
   cat enabled-modules || echo base clojure web git monokai
 }
 
-( cat prelude.el
+( sed "s,PWD,$PWD,g" prelude.el
   for i in `read_enabled_modules`; do
     echo ";; $i.el"
     cat modules/$i.el
