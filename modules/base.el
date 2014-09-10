@@ -40,6 +40,10 @@
   (transpose-lines 1)
   (forward-line -1))
 
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+
 (nel:run-after-initializing
   (windmove-default-keybindings)
   (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning)
