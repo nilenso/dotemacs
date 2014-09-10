@@ -29,6 +29,17 @@
 				(progn (indent-region (region-beginning) (region-end)))
       (progn (indent-buffer)))))
 
+(defun move-line-up ()
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2))
+
+(defun move-line-down ()
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1))
+
 (nel:run-after-initializing
   (windmove-default-keybindings)
   (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning)
@@ -37,4 +48,7 @@
   (global-set-key (kbd "s-g") 'projectile-grep)
   (global-set-key (kbd "M-x") 'smex)
   (global-set-key (kbd "RET") 'newline-and-indent)
+  (global-set-key (kbd "s-k") 'kill-whole-line)
+  (global-set-key (kbd "M-S-<up>") 'move-line-up)
+  (global-set-key (kbd "M-S-<down>") 'move-line-down)
   (global-set-key (kbd "C-c n") 'indent-region-or-buffer))
