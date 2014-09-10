@@ -1,12 +1,13 @@
-copy-settings: ~/.emacs.d update-submodules
-	tar c modules personal snippets prelude-modules.el | tar xC $<
-	find personal-configs -name $$USER.el | sed 's,personal-configs/,,' | xargs tar cC personal-configs .gitkeep | tar xC $<
-	touch custom-el/$$USER.el
-	ln -sf $$PWD/custom-el/$$USER.el $</personal/custom.el
+all: ~/.emacs ~/.emacs.d ~/.emacs.d/custom.el
+
+~/.emacs: prelude.el epilogue.el modules enabled-modules
+	./install.sh $@
 
 ~/.emacs.d:
-	test -d $@ || (curl -L http://git.io/epre | sh)
+	mkdir -p $@
 
-update-submodules:
-	git submodule init
-	git submodule update
+~/.emacs.d/custom.el: 
+	touch $@
+
+enabled-modules:
+	# Using the default enabled modules. See sample-enabled-modules for samples
