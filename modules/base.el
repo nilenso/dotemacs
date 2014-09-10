@@ -10,6 +10,7 @@
  (delete-selection-mode t)
  (fset 'yes-or-no-p 'y-or-n-p)
  (scroll-bar-mode -1)
+ (ido-mode 1)
  (yas-global-mode t))
 
 (defun back-to-indentation-or-beginning () (interactive)
@@ -42,7 +43,6 @@
 
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
-(ido-mode 1)
 
 (nel:run-after-initializing
  (windmove-default-keybindings)
