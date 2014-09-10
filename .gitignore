@@ -1,4 +1,5 @@
 enabled-modules
+modules/personal
 
 # Emacs Ignores
 *~
