@@ -1,3 +1,0 @@
-(:name queue
-       :description "Queue data structure"
-       :type elpa)
