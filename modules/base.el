@@ -16,6 +16,19 @@
    (if (= (point) (progn (back-to-indentation) (point)))
        (beginning-of-line)))
 
+(defun indent-buffer ()
+  "Indent the currently visited buffer."
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
+(defun indent-region-or-buffer ()
+  "Indent a region if selected, otherwise the whole buffer."
+  (interactive)
+  (save-excursion
+    (if (region-active-p)
+				(progn (indent-region (region-beginning) (region-end)))
+      (progn (indent-buffer)))))
+
 (nel:run-after-initializing
   (windmove-default-keybindings)
   (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning)
@@ -23,4 +36,5 @@
   (global-set-key (kbd "s-t") 'projectile-find-file)
   (global-set-key (kbd "s-g") 'projectile-grep)
   (global-set-key (kbd "M-x") 'smex)
-  (global-set-key (kbd "RET") 'newline-and-indent))
+  (global-set-key (kbd "RET") 'newline-and-indent)
+  (global-set-key (kbd "C-c n") 'indent-region-or-buffer))
