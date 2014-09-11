@@ -1,6 +1,6 @@
 all: ~/.emacs ~/.emacs.d ~/.emacs.d/custom.el
 
-~/.emacs: prelude.el epilogue.el modules enabled-modules
+~/.emacs: preface.el epilogue.el modules enabled-modules
 	./install.sh $@
 
 ~/.emacs.d:

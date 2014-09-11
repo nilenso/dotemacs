@@ -21,4 +21,4 @@
      (lambda ()
        ,@body)))
 
-;; end of prelude
+;; end of preface
