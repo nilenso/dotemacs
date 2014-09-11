@@ -1,1 +1,1 @@
-(nel:require-packages 'web-mode 'scss-mode)
+(nel:require-packages 'web-mode 'scss-mode 'coffee-mode)
