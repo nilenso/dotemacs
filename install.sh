@@ -1,7 +1,7 @@
 #!/bin/sh
 
 read_enabled_modules() {
-  cat enabled-modules || echo base clojure web git monokai sublime
+  cat enabled-modules
 }
 
 ( sed "s,PWD,$PWD,g" prelude.el

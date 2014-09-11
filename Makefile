@@ -10,4 +10,4 @@ all: ~/.emacs ~/.emacs.d ~/.emacs.d/custom.el
 	touch $@
 
 enabled-modules:
-	# Using the default enabled modules. See sample-enabled-modules for samples
+	if [ ! -f enabled-modules ]; then cp sample-enabled-modules/default enabled-modules; fi
