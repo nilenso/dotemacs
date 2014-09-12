@@ -16,6 +16,10 @@
   (setq nel:my-packages 
     (append nel:my-packages packages)))
 
+(defun nel:customize-package (name &rest details)
+  (setq el-get-sources
+        (cons (append (list :name name) details) el-get-sources)))
+
 (defmacro nel:run-after-initializing (&rest body) 
   `(add-hook 'nel-initialized-hook
      (lambda ()
