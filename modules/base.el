@@ -58,3 +58,9 @@
  (global-set-key (kbd "M-S-<down>") 'move-line-down)
  (global-set-key (kbd "C-c n") 'indent-region-or-buffer))
 
+;; Show full file path in the title bar
+(setq
+ frame-title-format
+ '((:eval (if (buffer-file-name)
+	      (abbreviate-file-name (buffer-file-name))
+	    "%b"))))
