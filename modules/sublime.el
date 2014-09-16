@@ -1,3 +1,5 @@
+(nel:require-packages 'expand-region)
+
 (defmacro move-back-horizontal-after (&rest code)
   `(let ((horizontal-position (current-column)))
      (progn
@@ -27,6 +29,7 @@
   (if (region-active-p) (mc/mark-next-like-this args) (er/mark-word)))
 
 (nel:run-after-initializing
+  (require 'expand-region)
   (global-set-key (kbd "M-s-<right>") 'switch-to-next-buffer)
   (global-set-key (kbd "M-s-<left>") 'switch-to-prev-buffer)
   (global-set-key (kbd "s-D") 'duplicate-line)
