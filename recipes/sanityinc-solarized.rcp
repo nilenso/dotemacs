@@ -1,0 +1,4 @@
+(:name sanityinc-solarized
+       :description "A pair of Emacs color themes based on Ethan Schoonover's 'solarized' theme"
+       :type github
+       :pkgname "purcell/color-theme-sanityinc-solarized")
