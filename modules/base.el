@@ -64,3 +64,8 @@
  '((:eval (if (buffer-file-name)
 	      (abbreviate-file-name (buffer-file-name))
 	    "%b"))))
+
+;; Scroll one line at a time
+(setq scroll-step 1)
+(setq scroll-conservatively 10000)
+(setq auto-window-vscroll nil)
