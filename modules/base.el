@@ -71,3 +71,7 @@
 (setq auto-window-vscroll nil)
 
 (global-hl-line-mode)
+
+;; Disables audio bell
+(setq ring-bell-function
+      (lambda () (message "*beep*")))
