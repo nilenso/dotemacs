@@ -33,7 +33,7 @@
 
 (nel:run-after-initializing
  (projectile-global-mode t)
- (global-rainbow-delimiters-mode t)
+ (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
  (global-linum-mode t)
  (global-company-mode t)
  (global-undo-tree-mode t)
