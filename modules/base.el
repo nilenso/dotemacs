@@ -66,9 +66,7 @@
 	    "%b"))))
 
 ;; Scroll one line at a time
-(setq scroll-step 1)
-(setq scroll-conservatively 10000)
-(setq auto-window-vscroll nil)
+(setq scroll-conservatively 10)
 
 (global-hl-line-mode)
 
