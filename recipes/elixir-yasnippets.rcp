@@ -1,0 +1,4 @@
+(:name elixir-yasnippets
+       :description "Snippets for Elixir"
+       :type github
+       :pkgname "timothyandrew/elixir-yasnippets")
