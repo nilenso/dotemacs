@@ -3,7 +3,6 @@
 (setq cider-repl-history-file "~/.emacs.d/nrepl-history")
 (setq cider-auto-select-error-buffer t)
 (setq cider-repl-popup-stacktraces t)
-(setq auto-enable-clojure-test-mode nil)
 
 (defun custom-cider-shortcuts ()
   (local-set-key (kbd "C-c ,") 'cider-test-run-tests)
