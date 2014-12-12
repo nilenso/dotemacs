@@ -1,4 +1,4 @@
-(nel:require-packages 'cider 'clj-refactor 'align-cljlet 'smartparens 'fill-column-indicator)
+(nel:require-packages 'stable-cider 'clj-refactor 'align-cljlet 'smartparens 'fill-column-indicator)
 
 (setq cider-repl-history-file "~/.emacs.d/nrepl-history")
 (setq cider-auto-select-error-buffer t)
