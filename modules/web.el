@@ -2,3 +2,4 @@
 
 (setq coffee-tab-width 2)
 (setq scss-compile-at-save nil)
+(setq js-indent-level 2)
