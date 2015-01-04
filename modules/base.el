@@ -1,4 +1,4 @@
-(nel:require-packages 'anzu 'browse-kill-ring 'company-mode 'projectile 'undo-tree 'smex 'multiple-cursors 'yasnippets 'rainbow-delimiters 'expand-region 'neotree)
+(nel:require-packages 'anzu 'browse-kill-ring 'company-mode 'projectile 'undo-tree 'smex 'multiple-cursors 'yasnippets 'rainbow-delimiters 'expand-region 'neotree 'flycheck)
 
 (defun back-to-indentation-or-beginning () (interactive)
   (if (= (point) (progn (back-to-indentation) (point)))
@@ -37,6 +37,7 @@
  (global-linum-mode t)
  (global-company-mode t)
  (global-undo-tree-mode t)
+ (global-flycheck-mode t)
  (tool-bar-mode -1)
  (ido-mode 1)
  (delete-selection-mode t)
