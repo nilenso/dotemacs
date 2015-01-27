@@ -1,0 +1,6 @@
+(:name stable-cider
+       :description "Stable versions of cider."
+       :type github
+       :pkgname "clojure-emacs/cider"
+       :depends (dash queue clojure-mode pkg-info)
+       :checkout "v0.8.1")
