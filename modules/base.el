@@ -28,6 +28,13 @@
   (transpose-lines 1)
   (forward-line -1))
 
+(defun kill-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (mapc 'kill-buffer
+        (delq (current-buffer)
+              (remove-if-not 'buffer-file-name (buffer-list)))))
+
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 
