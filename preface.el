@@ -25,4 +25,6 @@
      (lambda ()
        ,@body)))
 
+(add-to-list 'exec-path "~/bin")
+
 ;; end of preface
