@@ -1,5 +1,6 @@
 (nel:require-packages 'cider 'clj-refactor 'align-cljlet 'smartparens 'fill-column-indicator)
 
+(nel:customize-package 'cider :checkout "v0.12.0")
 (setq cider-repl-history-file "~/.emacs.d/nrepl-history")
 (setq cider-auto-select-error-buffer t)
 (setq cider-repl-popup-stacktraces t)
@@ -11,7 +12,8 @@
 
 (defun custom-cider-shortcuts ()
   (local-set-key (kbd "C-c ,") 'cider-test-run-tests)
-  (local-set-key (kbd "C-c ,") 'cider-test-run-tests))
+  (local-set-key (kbd "C-c ,") 'cider-test-run-tests)
+  (local-set-key (kbd "C-c M-o") 'cider-repl-clear-buffer))
 
 (defun custom-turn-on-fci-mode ()
   (when clojure-column-line
