@@ -1,5 +1,7 @@
 # dotemacs #
 
+**NOTE: This has been deprecated in favor of https://gitlab.com/nilenso/dotemacs**
+
 The .emacs.d for everyone at nilenso.com. Installs emacs el-get as a base.
 
 ## installing ##
